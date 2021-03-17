@@ -13,6 +13,7 @@ $review-star-size: 12px;
 :root {
   --font-normal: #{$font-normal};
   --font-sm: #{$font-normal * 0.75};
-  --font-lg: #{$font-normal * 1.1};
+  --font-lg: #{$font-normal * 1.5};
+  --font-xl: #{$font-normal * 2};
   --icon-size: #{$icon-size};
 }

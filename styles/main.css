@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lato:ital,wght@0,300;0,400;1,300&family=Quicksand:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap");
 :root {
   --font-normal: 14px;
   --font-sm: 10.5px;
-  --font-lg: 15.4px;
+  --font-lg: 21px;
+  --font-xl: 28px;
   --icon-size: 20px;
 }
 
@@ -88,37 +90,46 @@ h6:active, .btn:active {
 
 html,
 body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .modal, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
-.form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .is-profile, .inline, .inline-r, .flex-c {
+.form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .chart-header, .chart-icon, .chart-footer, .chart-data-number, .is-profile, .inline, .inline-r, .flex-c {
   width: 100%;
   height: 100%;
 }
 
 .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .modal, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
-.form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .is-profile, .inline, .inline-r, .flex-c {
+.form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .chart-header, .chart-icon, .chart-footer, .chart-data-number, .is-profile, .inline, .inline-r, .flex-c {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Regular"), url("../fonts/Segoe UI.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Italic"), url("../fonts/Segoe UI Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold"), url("../fonts/Segoe UI Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold Italic"), url("../fonts/Segoe UI Bold Italic.woff") format("woff");
+}
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-* ::-webkit-scrollbar-thumb {
-  background-color: rgba(169, 169, 169, 0.5);
-}
-
-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-* {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", "Lato", "Quicksand", "Caveat", cursive, "Segoe UI", -apple-system, BlinkMacSystemFont, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: var(--font-normal);
@@ -139,6 +150,25 @@ img {
 
 .txt-c {
   text-align: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.5);
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ion-icon {
@@ -953,6 +983,133 @@ pre span:before {
   padding: 10px;
 }
 
+.chart {
+  overflow: hidden;
+}
+
+.chart.is-icon .chart-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chart.is-icon .chart-icon > * {
+  font-size: 20px;
+}
+
+.chart-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chart-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.chart-icon > * {
+  font-size: var(--font-normal);
+  color: var(--grey-color);
+}
+
+.chart-title {
+  font-size: var(--font-normal);
+}
+
+.chart-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.chart-footer > * {
+  font-size: var(--font-sm);
+  color: var(--grey-color);
+}
+
+.chart-footer .left,
+.chart-footer .right {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chart-footer .left {
+  margin-right: 5px;
+}
+
+.chart-footer .right {
+  margin-left: 5px;
+}
+
+.chart-data-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+}
+
+.chart-data-number > .amount {
+  font-size: var(--font-xl);
+  font-weight: bold;
+}
+
+.chart-data-number > .unit {
+  color: var(--grey-color);
+  font-size: var(--font-normal);
+  padding: 0 2.5px;
+}
+
 :root {
   --wire-b-color: #ededed;
 }
@@ -1021,6 +1178,10 @@ pre span:before {
   height: 300px;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .scroll {
   overflow: auto;
 }
@@ -1076,6 +1237,18 @@ pre span:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.a-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.j-center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

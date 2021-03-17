@@ -55,6 +55,9 @@
   &-300 {
     height: 300px;
   }
+  &-auto {
+    height: auto;
+  }
 }
 .scroll {
   overflow: auto;
@@ -78,6 +81,12 @@
 }
 .flex-c {
   @include flex-center;
+}
+.a-center {
+  align-items: center;
+}
+.j-center {
+  justify-content: center;
 }
 .flow-a {
   overflow: auto;
