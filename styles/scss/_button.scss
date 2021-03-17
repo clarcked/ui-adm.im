@@ -1,4 +1,4 @@
-$btn-height: 36px; 
+$btn-height: 36px;
 .btn {
   @extend %cleaned;
   @include flex-center;
@@ -6,6 +6,7 @@ $btn-height: 36px;
   background: #fff;
   border: 1px solid var(--btn-b-color);
   border-radius: 2px;
+  padding: 0 15px;
   cursor: pointer;
   &:active,
   &:hover {
@@ -16,6 +17,10 @@ $btn-height: 36px;
     }
   }
   &-icon {
+    padding: 0 0;
     @include dimension($btn-height - 2);
+    * {
+      font-size: 12px;
+    }
   }
 }

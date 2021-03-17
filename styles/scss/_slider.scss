@@ -1,0 +1,11 @@
+.slider {
+  @include grid-cols(1, auto 1fr auto);
+  align-items: center;
+  .slides {
+    overflow: auto;
+    > * {
+      width: 100vw;
+      padding: 10px;
+    }
+  }
+}

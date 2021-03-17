@@ -1,0 +1,36 @@
+.card {
+  overflow: hidden;
+  &-body {
+    .thumb {
+      width: 100%;
+      overflow: hidden;
+      @include flex-center;
+      img {
+        height: 100px;
+        object-fit: cover;
+        border: 2px solid #fafafa;
+        border-radius: 2px;
+      }
+    }
+    .reviews {
+      margin: 5px 0 0 0;
+    }
+    .title {
+      margin: 5px 0 0 0;
+      font-size: var(--font-lg);
+      font-weight: bold;
+    }
+    .description {
+      margin: 5px 0 0 0;
+      color: var(--grey-color);
+    }
+  }
+  &-footer {
+    @include flex-rows;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: var(--font-sm);
+    color: var(--grey-color);
+  }
+}

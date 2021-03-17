@@ -1,0 +1,16 @@
+.review {
+  @include flex-rows;
+  align-items: center;
+  justify-content: space-between;
+  &-title {
+    font-size: var(--font-sm);
+    font-weight: bold;
+  }
+  &-stars {
+    @include flex-rows;
+    justify-content: flex-end;
+    * {
+      font-size: $review-star-size;
+    }
+  }
+}

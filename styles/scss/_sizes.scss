@@ -6,11 +6,13 @@ $avatar-size: 40px;
 $pad-size-sm: 15px;
 $pad-size: 20px;
 $form-field-size: 35px;
-$gap: 20px;
-$gap-sm: 10px;
+$gap: 10px;
+$gap-sm: 5px;
+$review-star-size: 12px;
 
 :root {
   --font-normal: #{$font-normal};
   --font-sm: #{$font-normal * 0.75};
+  --font-lg: #{$font-normal * 1.1};
   --icon-size: #{$icon-size};
 }

@@ -1,10 +1,27 @@
 .rows {
-  @include flex-rows; 
-  &.gap .col {
+  @include flex-rows;
+  flex-wrap: wrap;
+  &.gap > * {
     padding: $gap;
   }
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+  &.space-b {
+    justify-content: space-between;
+  }
   .col {
-    flex: 1;
+    @for $col from 1 to 14 {
+      &-#{$col} {
+        width: calc(#{(100vw / 14) * $col} - 2px);
+      }
+      &-#{$col}p {
+        width: calc(#{(100% / 14) * $col} - 2px);
+      }
+    }
+    &-auto {
+      flex: 1;
+    }
   }
 }
 .grid-r {
@@ -18,7 +35,7 @@
 }
 
 .grid-c {
-  @include grid-cols; 
+  @include grid-cols;
   &-a-1 {
     @include grid-cols(1, auto 1fr);
   }

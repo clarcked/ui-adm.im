@@ -1,6 +1,7 @@
 :root {
   --font-normal: 14px;
   --font-sm: 10.5px;
+  --font-lg: 15.4px;
   --icon-size: 20px;
 }
 
@@ -43,6 +44,8 @@ h6, .btn {
   border: none;
   font-weight: normal;
   color: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 html:hover,
@@ -84,14 +87,14 @@ h6:active, .btn:active {
 }
 
 html,
-body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .form .field .control, .form .field .control.has-icon .left,
-.form .field .control.has-icon .right, .btn, .is-profile, .inline, .inline-r, .flex-c {
+body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
+.form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .is-profile, .inline, .inline-r, .flex-c {
   width: 100%;
   height: 100%;
 }
 
-.rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .form .field .control, .form .field .control.has-icon .left,
-.form .field .control.has-icon .right, .btn, .is-profile, .inline, .inline-r, .flex-c {
+.rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
+.form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .is-profile, .inline, .inline-r, .flex-c {
   overflow: hidden;
 }
 
@@ -107,6 +110,11 @@ body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-
 
 * ::-webkit-scrollbar-thumb {
   background-color: rgba(169, 169, 169, 0.5);
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 * {
@@ -180,13 +188,130 @@ pre span:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.rows.gap .col {
-  padding: 20px;
+.rows.gap > * {
+  padding: 10px;
 }
 
-.rows .col {
+.rows.nowrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.rows.space-b {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rows .col-1 {
+  width: calc(7.14286vw - 2px);
+}
+
+.rows .col-1p {
+  width: calc(7.14286% - 2px);
+}
+
+.rows .col-2 {
+  width: calc(14.28571vw - 2px);
+}
+
+.rows .col-2p {
+  width: calc(14.28571% - 2px);
+}
+
+.rows .col-3 {
+  width: calc(21.42857vw - 2px);
+}
+
+.rows .col-3p {
+  width: calc(21.42857% - 2px);
+}
+
+.rows .col-4 {
+  width: calc(28.57143vw - 2px);
+}
+
+.rows .col-4p {
+  width: calc(28.57143% - 2px);
+}
+
+.rows .col-5 {
+  width: calc(35.71429vw - 2px);
+}
+
+.rows .col-5p {
+  width: calc(35.71429% - 2px);
+}
+
+.rows .col-6 {
+  width: calc(42.85714vw - 2px);
+}
+
+.rows .col-6p {
+  width: calc(42.85714% - 2px);
+}
+
+.rows .col-7 {
+  width: calc(50vw - 2px);
+}
+
+.rows .col-7p {
+  width: calc(50% - 2px);
+}
+
+.rows .col-8 {
+  width: calc(57.14286vw - 2px);
+}
+
+.rows .col-8p {
+  width: calc(57.14286% - 2px);
+}
+
+.rows .col-9 {
+  width: calc(64.28571vw - 2px);
+}
+
+.rows .col-9p {
+  width: calc(64.28571% - 2px);
+}
+
+.rows .col-10 {
+  width: calc(71.42857vw - 2px);
+}
+
+.rows .col-10p {
+  width: calc(71.42857% - 2px);
+}
+
+.rows .col-11 {
+  width: calc(78.57143vw - 2px);
+}
+
+.rows .col-11p {
+  width: calc(78.57143% - 2px);
+}
+
+.rows .col-12 {
+  width: calc(85.71429vw - 2px);
+}
+
+.rows .col-12p {
+  width: calc(85.71429% - 2px);
+}
+
+.rows .col-13 {
+  width: calc(92.85714vw - 2px);
+}
+
+.rows .col-13p {
+  width: calc(92.85714% - 2px);
+}
+
+.rows .col-auto {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -400,13 +525,43 @@ pre span:before {
 
 .avatar img {
   border-radius: 50%;
+  border: 2px solid #fff;
   width: 40px;
   height: 40px;
 }
 
-.avatar.sm img {
+.avatar-sm img {
   width: 30px;
   height: 30px;
+}
+
+.avatar-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.avatar-group > * {
+  position: relative;
+}
+
+.avatar-group > *:nth-of-type(1) {
+  left: 30px;
+}
+
+.avatar-group > *:nth-of-type(2) {
+  left: 15px;
 }
 
 .form .field {
@@ -579,6 +734,7 @@ pre span:before {
   background: #fff;
   border: 1px solid var(--btn-b-color);
   border-radius: 2px;
+  padding: 0 15px;
   cursor: pointer;
 }
 
@@ -592,8 +748,146 @@ pre span:before {
 }
 
 .btn-icon {
+  padding: 0 0;
   width: 34px;
   height: 34px;
+}
+
+.btn-icon * {
+  font-size: 12px;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card-body .thumb {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-body .thumb img {
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #fafafa;
+  border-radius: 2px;
+}
+
+.card-body .reviews {
+  margin: 5px 0 0 0;
+}
+
+.card-body .title {
+  margin: 5px 0 0 0;
+  font-size: var(--font-lg);
+  font-weight: bold;
+}
+
+.card-body .description {
+  margin: 5px 0 0 0;
+  color: var(--grey-color);
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 0;
+  font-size: var(--font-sm);
+  color: var(--grey-color);
+}
+
+.review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.review-title {
+  font-size: var(--font-sm);
+  font-weight: bold;
+}
+
+.review-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.review-stars * {
+  font-size: 12px;
+}
+
+.slider {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto 1fr auto)[1];
+      grid-template-columns: repeat(1, auto 1fr auto);
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider .slides {
+  overflow: auto;
+}
+
+.slider .slides > * {
+  width: 100vw;
+  padding: 10px;
 }
 
 :root {
@@ -640,6 +934,14 @@ pre span:before {
   padding: 0 15px;
 }
 
+.w-100 {
+  width: 100px;
+}
+
+.w-150 {
+  width: 150px;
+}
+
 .w-300 {
   width: 300px;
 }
@@ -650,6 +952,10 @@ pre span:before {
 
 .w-50vw {
   width: 50vw;
+}
+
+.h-300 {
+  height: 300px;
 }
 
 .scroll {
@@ -722,5 +1028,11 @@ pre span:before {
 
 .circle {
   border-radius: 50%;
+}
+
+.flex-a {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 /*# sourceMappingURL=main.css.map */

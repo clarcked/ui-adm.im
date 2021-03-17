@@ -35,6 +35,12 @@
   }
 }
 .w {
+  &-100 {
+    width: 100px;
+  }
+  &-150 {
+    width: 150px;
+  }
   &-300 {
     width: 300px;
   }
@@ -43,6 +49,11 @@
   }
   &-50vw {
     width: 50vw;
+  }
+}
+.h {
+  &-300 {
+    height: 300px;
   }
 }
 .scroll {
@@ -76,4 +87,7 @@
 }
 .circle {
   border-radius: 50%;
+}
+.flex-a {
+  flex: auto;
 }
