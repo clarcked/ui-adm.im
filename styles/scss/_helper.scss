@@ -2,9 +2,6 @@
   --wire-b-color: #{darken(#fff, 7)};
 }
 
-.is-profile {
-  @include grid-rows;
-}
 .wire {
   &-b {
     border-bottom: 1px solid var(--wire-b-color);
