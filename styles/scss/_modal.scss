@@ -1,0 +1,37 @@
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(#222, 0.2);
+  @include flex-rows;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  &.open {
+    display: flex;
+  }
+  &-container {
+    max-width: 70vw;
+    max-height: 60vh;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid darken(#fff, 20);
+    position: relative;
+  }
+  &-actions {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &-action {
+    button {
+      background: transparent;
+    }
+  }
+}
