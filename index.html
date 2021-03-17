@@ -6,9 +6,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
     <title>User Interface</title>
+    <style>
+    </style>
   </head>
   <body>
-    <div>Hello World</div>
-    <h1>Lorem ipsum</h1>
+    <div class="layout layout-h-1-auto">
+      <div class="layout layout-v-auto-1">
+        <nav class="nav nav-top wire-b">
+          <ul class="left">
+            <li><a href="">Brand Name</a></li>
+          </ul>
+          <ul class="right">
+            <li>
+              <a href="" class="is-icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="" class="is-icon"
+                ><ion-icon name="log-out-outline"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="container layout layout-h-auto-1">
+          <nav class="nav nav-left wire-r">
+            <ul class="top">
+              <li>
+                <a href="" class="is-icon"
+                  ><ion-icon name="pie-chart"></ion-icon
+                ></a>
+              </li>
+            </ul>
+            <ul class="middle">
+              <li>
+                <a href="" class="is-icon"
+                  ><ion-icon name="bag-handle"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="" class="is-icon"
+                  ><ion-icon name="chatbubbles"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="" class="is-icon"
+                  ><ion-icon name="cloud-upload"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="" class="is-icon"
+                  ><ion-icon name="file-tray-full-sharp"></ion-icon
+                ></a>
+              </li>
+            </ul>
+            <ul class="bottom">
+              <li>
+                <a href="" class="is-icon"
+                  ><ion-icon name="people"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="" class="is-icon"
+                  ><ion-icon name="settings"></ion-icon
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="content layout-v-1-auto">
+            <div class="pad">
+              <div class="layout layout-h-1-auto">
+                <form class="form layout scrollable">
+                  <div class="field">
+                    <label for="input-1">Password</label>
+                    <div class="control focused">
+                      <input
+                        placeholder="Enter Password"
+                        class="input"
+                        id="input-1"
+                        type="password"
+                        name="input.one"
+                      />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="input-2">Email or Username</label>
+                    <div class="control">
+                      <input
+                        placeholder="Enter credentials"
+                        class="input"
+                        id="input-2"
+                        type="text"
+                        name="input.one"
+                      />
+                    </div>
+                  </div>
+                  <div class="field selector">
+                    <label for="input-3">Country</label>
+                    <div class="control">
+                      <input
+                        placeholder="Choose a country"
+                        class="input"
+                        id="input-3"
+                        type="text"
+                        name="input.country"
+                      />
+                    </div>
+                    <div class="selector-items">
+                      <ul>
+                        <li><a class="selector-item">Argentina</a></li>
+                        <li><a class="selector-item">Haiti</a></li>
+                        <li><a class="selector-item">Brazil</a></li>
+                        <li><a class="selector-item">Chile</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="field textarea">
+                    <label for="input-4">Description</label>
+                    <div class="control">
+                      <textarea
+                        class="input"
+                        id="input-4"
+                        name="input.description"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="field checkbox">
+                    <label for="input-5">
+                      <div class="label">Check Features</div>
+                      <input id="input-5" type="checkbox" name="input.five[]" />
+                    </label>
+                  </div>
+                  <div class="field checkbox">
+                    <label for="input-5">
+                      <div class="label">Check Features</div>
+                      <input id="input-5" type="checkbox" name="input.five[]" />
+                    </label>
+                  </div>
+                  <div class="field checkbox">
+                    <label for="input-5">
+                      <div class="label">Check Features</div>
+                      <input id="input-5" type="checkbox" name="input.five[]" />
+                    </label>
+                  </div>
+                  <div class="field checkbox">
+                    <label for="input-5">
+                      <div class="label">Check Features</div>
+                      <input id="input-5" type="checkbox" name="input.five[]" />
+                    </label>
+                  </div>
+                  <div class="field radiobox">
+                    <label>
+                      <div class="label" for="input-6">Is Feature one</div>
+                      <input id="input-6" type="radio" name="input.six" />
+                    </label>
+                    <label>
+                      <div class="label" for="input-7">Is Feature two</div>
+                      <input id="input-7" type="radio" name="input.six" />
+                    </label>
+                  </div>
+                </form>
+                <div class="pad w-50vw"></div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="txt-sm">&copy; InMarketify 2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="w-300 wire-l">
+        <div class="layout layout-v-auto-1">
+          <nav class="nav nav-top wire-b">
+            <ul class="left">
+              <li>
+                <a href="" class="is-icon">
+                  <ion-icon name="notifications-sharp"></ion-icon
+                ></a>
+              </li>
+            </ul>
+            <ul class="right">
+              <li>
+                <a href="" class="is-profile">
+                  <div class="txt-sm txt-r pad-x-sm">Monclair Clarck</div>
+                  <figure class="avatar sm">
+                    <img src="https://fakeimg.pl/600x600" alt="avatar" />
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="pad">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            veritatis ipsum sint tempora debitis deleniti nostrum officiis
+            expedita quibusdam ea, corporis repellat temporibus qui. Debitis
+            facere illum dignissimos cumque iusto?
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

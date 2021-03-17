@@ -2,6 +2,7 @@
   box-sizing: border-box;
   &::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
   }
 
   & ::-webkit-scrollbar-thumb {
@@ -12,6 +13,11 @@
 html,
 body,
 article,
+figure,
+input,
+button,
+textarea,
+select,
 ul,
 li,
 a,

@@ -1,0 +1,11 @@
+$dracula: #2d3436 !default;
+$tomato: #ff6348 !default;
+$ufogreen: #2ed573 !default;
+$redpigment: #ea2027 !default;
+
+:root {
+  --dark-color: #{$dracula};
+  --warning-color: #{$tomato};
+  --success-color: #{$ufogreen};
+  --danger-color: #{$redpigment};
+}

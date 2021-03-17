@@ -1,0 +1,56 @@
+:root {
+  --wire-b-color: #{darken(#fff, 7)};
+}
+
+.is-profile {
+  @include grid-rows;
+}
+.wire {
+  &-b {
+    border-bottom: 1px solid var(--wire-b-color);
+  }
+  &-l {
+    border-left: 1px solid var(--wire-b-color);
+  }
+  &-r {
+    border-right: 1px solid var(--wire-b-color);
+  }
+}
+.footer {
+  text-align: center;
+  padding: 5px;
+}
+.pad {
+  padding: $pad-size;
+  &-sm {
+    padding: $pad-size-sm;
+  }
+  &-x {
+    &-sm {
+      padding: 0 $pad-size-sm;
+    }
+  }
+}
+.w {
+  &-300 {
+    width: 300px;
+  }
+  &-50p {
+    width: 50%;
+  }
+  &-50vw {
+    width: 50vw;
+  }
+}
+.scrollable {
+  overflow: auto;
+}
+
+.inline{
+  @include flex-rows;
+  align-items: center;
+}
+.inline-r{
+  @include flex-rows(true);
+  align-items: center;
+}

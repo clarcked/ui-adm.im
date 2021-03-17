@@ -1,0 +1,89 @@
+$form-label-size: 12px;
+
+.form {
+  .field {
+    position: relative;
+    height: $form-field-size * 1.5;
+    .control {
+      border: 1px solid darken(#fff, 10);
+      padding: 0 10px;
+      border-radius: 3px;
+    }
+    > label {
+      font-size: $form-label-size;
+      padding: 2px 8px;
+      position: relative;
+      top: $form-label-size / 2;
+      left: 5px;
+      background: #fff;
+      height: $form-field-size / 2;
+    }
+    .input {
+      width: 100%;
+      border: none;
+      height: $form-field-size;
+      &::placeholder {
+        color: darken(#fff, 20);
+        font-size: $form-label-size;
+      }
+    }
+    .textarea {
+      height: 100px;
+      padding: 5px 0;
+    }
+    &.selector {
+      .selector {
+        &-items {
+          display: none;
+          border-top: none;
+          border: 1px solid darken(#fff, 10);
+          background: #fff;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+          position: absolute;
+          z-index: 999;
+          width: 100%;
+          height: 100px;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+        &-item {
+          display: block;
+          padding: 10px 10px;
+          cursor: pointer;
+          &:hover {
+            background: darken(#fff, 5);
+          }
+        }
+      }
+      &.open {
+        .control {
+          border-bottom: none;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        .selector {
+          &-items {
+            display: block;
+          }
+        }
+      }
+    }
+    &.checkbox,
+    &.radiobox {
+      @include flex-rows;
+      align-items: center;
+      height: auto;
+      label {
+        flex: 1;
+        @include flex-rows(true);
+        height: auto;
+      }
+      .label {
+        flex: 1;
+        padding: 5px 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

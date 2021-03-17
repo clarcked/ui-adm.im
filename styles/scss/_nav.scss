@@ -1,0 +1,40 @@
+.nav {
+  a {
+    padding: 0 $nav-link-pad;
+    height: $nav-height;
+    @include flex-center;
+    &.is-icon {
+      width: $nav-height;
+      padding: 0;
+    }
+    &.is-profile {
+      padding: 0 15px;
+    }
+  }
+  &-top {
+    @include flex-rows;
+    justify-content: space-between;
+    .left {
+      @include flex-rows;
+    }
+    .right {
+      @include flex-rows;
+    }
+  }
+  &-left {
+    @include flex-cols;
+    align-items: space-between;
+    .top {
+      @include flex-cols;
+    }
+    .middle {
+      @include flex-cols;
+    }
+    .bottom {
+      @include flex-cols;
+    }
+    .middle {
+      flex: 1;
+    }
+  }
+}

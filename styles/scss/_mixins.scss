@@ -1,34 +1,43 @@
-%cleaned {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  outline: none;
-  box-shadow: none;
-  border: none;
-  font-weight: normal;
-  &:hover,
-  &:active {
-    outline: none;
-  }
+@mixin dimension($size: $avatar-size) {
+  width: $size;
+  height: $size;
 }
-%expanded {
-  width: 100vw;
-  height: 100vh;
+@mixin grid-cols($repeat: 1, $frames: auto 1fr) {
+  display: grid;
+  grid-template-columns: repeat($repeat, $frames);
+  align-items: stretch;
+  @extend %expanded;
+}
+@mixin grid-rows($repeat: 1, $frames: auto 1fr) {
+  display: grid;
+  grid-template-rows: repeat($repeat, $frames);
+  @extend %expanded;
 }
 
-%hiddenflow {
-  overflow: hidden;
+@mixin flex-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-%scrollable {
-  overflow: auto;
-  &-y {
-    @extend %hiddenflow;
-    overflow-y: auto;
+@mixin flex-rows($isReverse: false) {
+  display: flex;
+  align-items: center;
+  @if $isReverse {
+    flex-direction: row-reverse;
+  } @else {
+    flex-direction: row;
   }
-  &-x {
-    @extend %hiddenflow;
-    overflow-x: auto;
+}
+
+@mixin flex-cols($isReverse: false) {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  @if $isReverse {
+    flex-direction: column-reverse;
+  } @else {
+    flex-direction: column;
   }
 }

@@ -5,4 +5,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: var(--font-normal);
+  color: var(--dark-color);
+}
+
+.txt {
+  &-sm {
+    font-size: var(--font-sm);
+  }
+  &-l {
+    text-align: left;
+  }
+  &-r {
+    text-align: right;
+  }
+  &-c {
+    text-align: center;
+  }
 }

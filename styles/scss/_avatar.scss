@@ -1,0 +1,10 @@
+.avatar {
+  img {
+    border-radius: 50%;
+    @include dimension;
+  }
+  &.sm img {
+    $size: $avatar-size * 0.75;
+    @include dimension($size);
+  }
+}
