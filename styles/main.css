@@ -6,9 +6,13 @@
 
 :root {
   --dark-color: #2d3436;
+  --grey-color: grey;
   --warning-color: #ff6348;
   --success-color: #2ed573;
   --danger-color: #ea2027;
+  --hover-color: gray;
+  --hover-b-color: #cccccc;
+  --btn-b-color: #e6e6e6;
 }
 
 html,
@@ -28,7 +32,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, .btn {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -58,7 +62,7 @@ h2:hover,
 h3:hover,
 h4:hover,
 h5:hover,
-h6:hover, html:active,
+h6:hover, .btn:hover, html:active,
 body:active,
 article:active,
 figure:active,
@@ -75,14 +79,20 @@ h2:active,
 h3:active,
 h4:active,
 h5:active,
-h6:active {
+h6:active, .btn:active {
   outline: none;
 }
 
 html,
-body, .layout, .layout-adm, .layout-adm > .container, .layout-v-auto-1, .layout-v-1-auto, .layout-h-auto-1, .layout-h-1-auto, .is-profile {
+body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .form .field .control, .form .field .control.has-icon .left,
+.form .field .control.has-icon .right, .btn, .is-profile, .inline, .inline-r, .flex-c {
   width: 100%;
   height: 100%;
+}
+
+.rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .form .field .control, .form .field .control.has-icon .left,
+.form .field .control.has-icon .right, .btn, .is-profile, .inline, .inline-r, .flex-c {
+  overflow: hidden;
 }
 
 * {
@@ -128,6 +138,10 @@ ion-icon {
   font-size: var(--icon-size);
 }
 
+.icon-sm > * {
+  font-size: 10px;
+}
+
 pre {
   height: 100%;
   font-family: monospace;
@@ -155,43 +169,61 @@ pre span:before {
   color: #888;
 }
 
-.layout {
-  overflow: hidden;
-}
-
-.layout-adm {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (50px 1fr)[1];
-      grid-template-rows: repeat(1, 50px 1fr);
-}
-
-.layout-adm > .container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (50px 1fr)[1];
-      grid-template-columns: repeat(1, 50px 1fr);
+.rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.layout-v-auto-1 {
+.rows.gap .col {
+  padding: 20px;
+}
+
+.rows .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.grid-r {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr 1fr)[1];
+      grid-template-rows: repeat(1, 1fr 1fr);
+}
+
+.grid-r-a-1 {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (auto 1fr)[1];
       grid-template-rows: repeat(1, auto 1fr);
 }
 
-.layout-v-1-auto {
+.grid-r-1-a {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr auto)[1];
       grid-template-rows: repeat(1, 1fr auto);
 }
 
-.layout-h-auto-1 {
+.grid-c {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr 1fr)[1];
+      grid-template-columns: repeat(1, 1fr 1fr);
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.grid-c-a-1 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto 1fr)[1];
@@ -201,7 +233,7 @@ pre span:before {
           align-items: stretch;
 }
 
-.layout-h-1-auto {
+.grid-c-1-a {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr auto)[1];
@@ -227,6 +259,7 @@ pre span:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: var(--dark-color);
 }
 
 .nav a.is-icon {
@@ -234,17 +267,29 @@ pre span:before {
   padding: 0;
 }
 
+.nav a.is-icon > * {
+  color: var(--grey-color);
+}
+
 .nav a.is-profile {
   padding: 0 15px;
+}
+
+.nav a:hover {
+  color: var(--dark-color);
+}
+
+.nav a:hover > * {
+  color: var(--dark-color);
 }
 
 .nav-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -258,35 +303,38 @@ pre span:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .nav-top .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .nav-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -294,18 +342,12 @@ pre span:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
 }
 
 .nav-left .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -313,15 +355,15 @@ pre span:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .nav-left .middle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -329,15 +371,18 @@ pre span:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .nav-left .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -345,9 +390,9 @@ pre span:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.nav-left .middle {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -366,54 +411,88 @@ pre span:before {
 
 .form .field {
   position: relative;
-  height: 45px;
+  height: 35px;
 }
 
 .form .field .control {
   border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 0 10px;
-  border-radius: 3px;
 }
 
-.form .field > label {
+.form .field .control.has-icon {
+  padding: 0 0;
+}
+
+.form .field .control.has-icon .left,
+.form .field .control.has-icon .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 33px;
+  height: 33px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form .field .control.has-icon .left ion-icon,
+.form .field .control.has-icon .right ion-icon {
   font-size: 12px;
-  padding: 2px 8px;
-  position: relative;
-  top: 6px;
-  left: 5px;
-  background: #fff;
-  height: 15px;
+  color: #999999;
 }
 
-.form .field .input {
-  width: 100%;
+.form .field .control .input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   border: none;
-  height: 30px;
+  height: 35px -2;
 }
 
-.form .field .input::-webkit-input-placeholder {
+.form .field .control .input::-webkit-input-placeholder {
   color: #cccccc;
   font-size: 12px;
 }
 
-.form .field .input:-ms-input-placeholder {
+.form .field .control .input:-ms-input-placeholder {
   color: #cccccc;
   font-size: 12px;
 }
 
-.form .field .input::-ms-input-placeholder {
+.form .field .control .input::-ms-input-placeholder {
   color: #cccccc;
   font-size: 12px;
 }
 
-.form .field .input::placeholder {
+.form .field .control .input::placeholder {
   color: #cccccc;
   font-size: 12px;
 }
 
-.form .field .textarea {
-  height: 100px;
-  padding: 5px 0;
+.form .field.textarea .control {
+  padding-top: 10px;
+  padding-right: 0;
 }
 
 .form .field.selector .selector-items {
@@ -455,40 +534,66 @@ pre span:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  align-items: center;
-  height: auto;
-}
-
-.form .field.checkbox label, .form .field.radiobox label {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.form .field.checkbox label, .form .field.radiobox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  height: auto;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .form .field.checkbox .label, .form .field.radiobox .label {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 5px 5px;
+  padding: 0 5px 0 5px;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 34px;
+  background: #fff;
+  border: 1px solid var(--btn-b-color);
+  border-radius: 2px;
   cursor: pointer;
+}
+
+.btn:active, .btn:hover {
+  border-color: var(--hover-b-color);
+  color: var(--hover-color);
+}
+
+.btn:active *, .btn:hover * {
+  color: var(--hover-color);
+}
+
+.btn-icon {
+  width: 34px;
+  height: 34px;
 }
 
 :root {
@@ -498,8 +603,8 @@ pre span:before {
 .is-profile {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (auto 1fr)[1];
-      grid-template-rows: repeat(1, auto 1fr);
+  -ms-grid-rows: (1fr 1fr)[1];
+      grid-template-rows: repeat(1, 1fr 1fr);
 }
 
 .wire-b {
@@ -512,6 +617,10 @@ pre span:before {
 
 .wire-r {
   border-right: 1px solid var(--wire-b-color);
+}
+
+.wire-t {
+  border-top: 1px solid var(--wire-b-color);
 }
 
 .footer {
@@ -543,35 +652,75 @@ pre span:before {
   width: 50vw;
 }
 
-.scrollable {
+.scroll {
   overflow: auto;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .inline-r {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.margin-b {
+  margin-bottom: 15px;
+}
+
+.flex-c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flow-a {
+  overflow: auto;
+}
+
+.outline {
+  border: none;
+}
+
+.circle {
+  border-radius: 50%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -3,12 +3,22 @@
     padding: 0 $nav-link-pad;
     height: $nav-height;
     @include flex-center;
+    color: var(--dark-color);
     &.is-icon {
       width: $nav-height;
       padding: 0;
+      > * {
+        color: var(--grey-color);
+      }
     }
     &.is-profile {
       padding: 0 15px;
+    }
+    &:hover {
+      color: var(--dark-color);
+      > * {
+        color: var(--dark-color);
+      }
     }
   }
   &-top {
@@ -16,24 +26,27 @@
     justify-content: space-between;
     .left {
       @include flex-rows;
+      justify-content: flex-start;
     }
     .right {
       @include flex-rows;
+      justify-content: flex-end;
     }
   }
   &-left {
     @include flex-cols;
-    align-items: space-between;
     .top {
       @include flex-cols;
+      flex: 1;
     }
     .middle {
       @include flex-cols;
+      justify-content: center;
+      flex: 3;
     }
     .bottom {
       @include flex-cols;
-    }
-    .middle {
+      justify-content: flex-end;
       flex: 1;
     }
   }

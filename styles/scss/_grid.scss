@@ -1,0 +1,28 @@
+.rows {
+  @include flex-rows; 
+  &.gap .col {
+    padding: $gap;
+  }
+  .col {
+    flex: 1;
+  }
+}
+.grid-r {
+  @include grid-rows;
+  &-a-1 {
+    @include grid-rows(1, auto 1fr);
+  }
+  &-1-a {
+    @include grid-rows(1, 1fr auto);
+  }
+}
+
+.grid-c {
+  @include grid-cols; 
+  &-a-1 {
+    @include grid-cols(1, auto 1fr);
+  }
+  &-1-a {
+    @include grid-cols(1, 1fr auto);
+  }
+}

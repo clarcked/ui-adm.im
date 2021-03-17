@@ -1,0 +1,21 @@
+$btn-height: 36px; 
+.btn {
+  @extend %cleaned;
+  @include flex-center;
+  height: $btn-height - 2;
+  background: #fff;
+  border: 1px solid var(--btn-b-color);
+  border-radius: 2px;
+  cursor: pointer;
+  &:active,
+  &:hover {
+    border-color: var(--hover-b-color);
+    color: var(--hover-color);
+    * {
+      color: var(--hover-color);
+    }
+  }
+  &-icon {
+    @include dimension($btn-height - 2);
+  }
+}

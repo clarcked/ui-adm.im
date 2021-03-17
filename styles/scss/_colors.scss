@@ -5,7 +5,12 @@ $redpigment: #ea2027 !default;
 
 :root {
   --dark-color: #{$dracula};
+  --grey-color: grey;
   --warning-color: #{$tomato};
   --success-color: #{$ufogreen};
   --danger-color: #{$redpigment};
+
+  --hover-color: #{darken(#fff, 50)};
+  --hover-b-color: #{darken(#fff, 20)};
+  --btn-b-color: #{darken(#fff, 10)};
 }

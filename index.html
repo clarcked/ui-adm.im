@@ -3,191 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=.0" />
     <link rel="stylesheet" href="./styles/main.css" />
     <title>User Interface</title>
-    <style>
-    </style>
+    <style></style>
   </head>
   <body>
-    <div class="layout layout-h-1-auto">
-      <div class="layout layout-v-auto-1">
+    <div class="grid-c-1-a">
+      <div class="grid-r-a-1">
         <nav class="nav nav-top wire-b">
           <ul class="left">
-            <li><a href="">Brand Name</a></li>
+            <li><a href="#">Brand Name</a></li>
           </ul>
           <ul class="right">
             <li>
-              <a href="" class="is-icon"
+              <a href="#" class="is-icon"
                 ><ion-icon name="help-outline"></ion-icon
               ></a>
             </li>
             <li>
-              <a href="" class="is-icon"
+              <a href="#" class="is-icon"
                 ><ion-icon name="log-out-outline"></ion-icon
               ></a>
             </li>
           </ul>
         </nav>
-        <div class="container layout layout-h-auto-1">
+        <div class="grid-c-a-1">
           <nav class="nav nav-left wire-r">
             <ul class="top">
               <li>
-                <a href="" class="is-icon"
+                <a href="#" class="is-icon"
                   ><ion-icon name="pie-chart"></ion-icon
                 ></a>
               </li>
             </ul>
             <ul class="middle">
               <li>
-                <a href="" class="is-icon"
+                <a href="#" class="is-icon"
                   ><ion-icon name="bag-handle"></ion-icon
                 ></a>
               </li>
               <li>
-                <a href="" class="is-icon"
+                <a href="#" class="is-icon"
                   ><ion-icon name="chatbubbles"></ion-icon
                 ></a>
               </li>
               <li>
-                <a href="" class="is-icon"
+                <a href="#" class="is-icon"
                   ><ion-icon name="cloud-upload"></ion-icon
                 ></a>
               </li>
               <li>
-                <a href="" class="is-icon"
+                <a href="#" class="is-icon"
                   ><ion-icon name="file-tray-full-sharp"></ion-icon
                 ></a>
               </li>
             </ul>
             <ul class="bottom">
               <li>
-                <a href="" class="is-icon"
+                <a href="#" class="is-icon"
                   ><ion-icon name="people"></ion-icon
                 ></a>
               </li>
               <li>
-                <a href="" class="is-icon"
+                <a href="#" class="is-icon"
                   ><ion-icon name="settings"></ion-icon
                 ></a>
               </li>
             </ul>
           </nav>
-          <div class="content layout-v-1-auto">
-            <div class="pad">
-              <div class="layout layout-h-1-auto">
-                <form class="form layout scrollable">
-                  <div class="field">
-                    <label for="input-1">Password</label>
-                    <div class="control focused">
-                      <input
-                        placeholder="Enter Password"
-                        class="input"
-                        id="input-1"
-                        type="password"
-                        name="input.one"
-                      />
+          <div class="grid-r-1-a">
+            <div class="pad scroll rows">
+              <form class="form col">
+                <div class="field margin-b">
+                  <div class="control has-icon">
+                    <div class="left">
+                      <ion-icon name="person-sharp"></ion-icon>
+                    </div>
+                    <input
+                      placeholder="Enter Password"
+                      class="input"
+                      type="password"
+                      name="input.one"
+                    />
+                    <div class="right">
+                      <ion-icon name="settings"></ion-icon>
                     </div>
                   </div>
-                  <div class="field">
-                    <label for="input-2">Email or Username</label>
-                    <div class="control">
-                      <input
-                        placeholder="Enter credentials"
-                        class="input"
-                        id="input-2"
-                        type="text"
-                        name="input.one"
-                      />
+                </div>
+                <div class="field margin-b">
+                  <div class="control">
+                    <input
+                      placeholder="Enter credentials"
+                      class="input"
+                      id="input-2"
+                      type="text"
+                      name="input.one"
+                    />
+                  </div>
+                </div>
+                <div class="field selector margin-b">
+                  <div class="control has-icon">
+                    <div class="left">
+                      <ion-icon name="flag-sharp"></ion-icon>
+                    </div>
+                    <input
+                      placeholder="Choose a country"
+                      class="input"
+                      id="input-3"
+                      type="text"
+                      name="input.country"
+                    />
+                  </div>
+                  <div class="selector-items">
+                    <ul>
+                      <li><a class="selector-item">Argentina</a></li>
+                      <li><a class="selector-item">Haiti</a></li>
+                      <li><a class="selector-item">Brazil</a></li>
+                      <li><a class="selector-item">Chile</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="field textarea margin-b">
+                  <div class="control">
+                    <textarea class="input" name="input.description"></textarea>
+                  </div>
+                </div>
+                <div class="field checkbox margin-b">
+                  <label>
+                    <input type="checkbox" name="input.five[]" />
+                    <div class="label">Check Features</div>
+                  </label>
+                </div>
+                <div class="field radiobox margin-b">
+                  <label>
+                    <input type="radio" name="input.six" />
+                    <div class="label">Is Feature one</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="input.six" />
+                    <div class="label">Is Feature two</div>
+                  </label>
+                </div>
+                <div class="margin-b">
+                  <div class="rows">
+                    <div class="col">
+                      <button type="button" class="btn">Submit</button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn outline">
+                        Apply Changes
+                      </button>
                     </div>
                   </div>
-                  <div class="field selector">
-                    <label for="input-3">Country</label>
-                    <div class="control">
-                      <input
-                        placeholder="Choose a country"
-                        class="input"
-                        id="input-3"
-                        type="text"
-                        name="input.country"
-                      />
+                </div>
+                <div class="margin-b">
+                  <div class="rows">
+                    <div class="col">
+                      <button type="button" class="btn btn-icon circle">
+                        <ion-icon name="call"></ion-icon>
+                      </button>
                     </div>
-                    <div class="selector-items">
-                      <ul>
-                        <li><a class="selector-item">Argentina</a></li>
-                        <li><a class="selector-item">Haiti</a></li>
-                        <li><a class="selector-item">Brazil</a></li>
-                        <li><a class="selector-item">Chile</a></li>
-                      </ul>
+                    <div class="col">
+                      <button type="button" class="btn btn-icon">
+                        <ion-icon name="calendar"></ion-icon>
+                      </button>
                     </div>
-                  </div>
-                  <div class="field textarea">
-                    <label for="input-4">Description</label>
-                    <div class="control">
-                      <textarea
-                        class="input"
-                        id="input-4"
-                        name="input.description"
-                      ></textarea>
+                    <div class="col">
+                      <button type="button" class="btn btn-icon icon-sm circle">
+                        <ion-icon name="camera"></ion-icon>
+                      </button>
                     </div>
                   </div>
-                  <div class="field checkbox">
-                    <label for="input-5">
-                      <div class="label">Check Features</div>
-                      <input id="input-5" type="checkbox" name="input.five[]" />
-                    </label>
-                  </div>
-                  <div class="field checkbox">
-                    <label for="input-5">
-                      <div class="label">Check Features</div>
-                      <input id="input-5" type="checkbox" name="input.five[]" />
-                    </label>
-                  </div>
-                  <div class="field checkbox">
-                    <label for="input-5">
-                      <div class="label">Check Features</div>
-                      <input id="input-5" type="checkbox" name="input.five[]" />
-                    </label>
-                  </div>
-                  <div class="field checkbox">
-                    <label for="input-5">
-                      <div class="label">Check Features</div>
-                      <input id="input-5" type="checkbox" name="input.five[]" />
-                    </label>
-                  </div>
-                  <div class="field radiobox">
-                    <label>
-                      <div class="label" for="input-6">Is Feature one</div>
-                      <input id="input-6" type="radio" name="input.six" />
-                    </label>
-                    <label>
-                      <div class="label" for="input-7">Is Feature two</div>
-                      <input id="input-7" type="radio" name="input.six" />
-                    </label>
-                  </div>
-                </form>
-                <div class="pad w-50vw"></div>
-              </div>
+                </div>
+              </form>
+              <div class="pad col"></div>
+              <div class="pad col"></div>
             </div>
-            <div class="footer">
-              <div class="txt-sm">&copy; InMarketify 2021</div>
+            <div class="footer wire-t">
+              <div class="txt-sm">&copy;InMarketify 2021</div>
             </div>
           </div>
         </div>
       </div>
       <aside class="w-300 wire-l">
-        <div class="layout layout-v-auto-1">
+        <div class="">
           <nav class="nav nav-top wire-b">
             <ul class="left">
               <li>
-                <a href="" class="is-icon">
-                  <ion-icon name="notifications-sharp"></ion-icon
+                <a href="#" class="is-icon">
+                  <ion-icon name="calendar"></ion-icon
                 ></a>
               </li>
             </ul>
             <ul class="right">
               <li>
-                <a href="" class="is-profile">
+                <a href="#" class="is-profile profile">
                   <div class="txt-sm txt-r pad-x-sm">Monclair Clarck</div>
                   <figure class="avatar sm">
                     <img src="https://fakeimg.pl/600x600" alt="avatar" />

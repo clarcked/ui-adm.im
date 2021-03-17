@@ -15,6 +15,9 @@
   &-r {
     border-right: 1px solid var(--wire-b-color);
   }
+  &-t {
+    border-top: 1px solid var(--wire-b-color);
+  }
 }
 .footer {
   text-align: center;
@@ -42,15 +45,35 @@
     width: 50vw;
   }
 }
-.scrollable {
+.scroll {
   overflow: auto;
 }
+.no-scroll {
+  overflow: hidden;
+}
 
-.inline{
+.inline {
   @include flex-rows;
   align-items: center;
 }
-.inline-r{
+.inline-r {
   @include flex-rows(true);
   align-items: center;
+}
+.margin {
+  &-b {
+    margin-bottom: 15px;
+  }
+}
+.flex-c {
+  @include flex-center;
+}
+.flow-a {
+  overflow: auto;
+}
+.outline {
+  border: none;
+}
+.circle {
+  border-radius: 50%;
 }
