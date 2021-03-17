@@ -1,0 +1,34 @@
+%cleaned {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  font-weight: normal;
+  &:hover,
+  &:active {
+    outline: none;
+  }
+}
+%expanded {
+  width: 100vw;
+  height: 100vh;
+}
+
+%hiddenflow {
+  overflow: hidden;
+}
+
+%scrollable {
+  overflow: auto;
+  &-y {
+    @extend %hiddenflow;
+    overflow-y: auto;
+  }
+  &-x {
+    @extend %hiddenflow;
+    overflow-x: auto;
+  }
+}

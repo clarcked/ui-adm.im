@@ -1,0 +1,82 @@
+:root {
+  --font-normal: 14px;
+}
+
+html,
+body,
+article,
+ul,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  font-weight: normal;
+}
+
+html:hover,
+body:hover,
+article:hover,
+ul:hover,
+li:hover,
+a:hover,
+p:hover,
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover, html:active,
+body:active,
+article:active,
+ul:active,
+li:active,
+a:active,
+p:active,
+h1:active,
+h2:active,
+h3:active,
+h4:active,
+h5:active,
+h6:active {
+  outline: none;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.5);
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-normal);
+}
+/*# sourceMappingURL=main.css.map */
