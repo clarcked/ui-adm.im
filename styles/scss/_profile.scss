@@ -1,0 +1,29 @@
+.profile {
+  &-header {
+    @include grid-rows(1, auto 1fr);
+    background: darken(#fff, 5);
+    .picture {
+      height: 120px;
+      @include flex-center;
+    }
+    .description {
+      padding:0 30px 20px;
+      font-size: var(--font-sm);
+      @include flex-cols;
+      align-items: center;
+    }
+    .username {
+      font-size: var(--font-normal);
+      font-weight: bold;
+    }
+  }
+  &-actions {
+    position: relative;
+    background: transparent;
+    .actions {
+      @include flex-rows;
+      justify-content: flex-end;
+      align-items: align;
+    }
+  }
+}

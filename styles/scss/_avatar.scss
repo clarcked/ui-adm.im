@@ -10,6 +10,12 @@
       @include dimension($size);
     }
   }
+  &-lg {
+    img {
+      $size: $avatar-size * 2;
+      @include dimension($size);
+    }
+  }
 }
 .avatar-group {
   position: relative;

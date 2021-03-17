@@ -11,14 +11,21 @@
         color: var(--grey-color);
       }
     }
-    &.is-profile {
-      padding: 0 15px;
-    }
+
     &:hover {
       color: var(--dark-color);
       > * {
         color: var(--dark-color);
       }
+    }
+  }
+  &-profile {
+    .username {
+      font-size: var(--font-normal);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 90px;
     }
   }
   &-top {
