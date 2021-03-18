@@ -31,3 +31,12 @@
     }
   }
 }
+
+.avatar-editable {
+  position: relative;
+  .btn {
+    position: absolute;
+    top: 70%;
+    right: 0;
+  }
+}

@@ -666,6 +666,16 @@ pre span:before {
   left: 15px;
 }
 
+.avatar-editable {
+  position: relative;
+}
+
+.avatar-editable .btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+}
+
 .form .field {
   position: relative;
   height: 35px;
@@ -1128,7 +1138,7 @@ pre span:before {
 }
 
 .profile-header .picture {
-  height: 120px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1145,7 +1155,7 @@ pre span:before {
 }
 
 .profile-header .description {
-  padding: 0 30px 20px;
+  padding: 0 20px 20px;
   font-size: var(--font-sm);
   display: -webkit-box;
   display: -ms-flexbox;
