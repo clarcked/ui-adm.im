@@ -89,13 +89,13 @@ h6:active, .btn:active {
 }
 
 html,
-body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .modal, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
+body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-right, .nav-side, .nav-left .top, .nav-right .top, .nav-side .top, .nav-left .middle, .nav-right .middle, .nav-side .middle, .nav-left .bottom, .nav-right .bottom, .nav-side .bottom, .modal, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
 .form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .chart-header, .chart-icon, .chart-footer, .chart-data-number, .profile-header, .profile-header .picture, .profile-header .description, .profile-actions .actions, .inline, .inline-r, .flex-c {
   width: 100%;
   height: 100%;
 }
 
-.rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-left .top, .nav-left .middle, .nav-left .bottom, .modal, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
+.rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-right, .nav-side, .nav-left .top, .nav-right .top, .nav-side .top, .nav-left .middle, .nav-right .middle, .nav-side .middle, .nav-left .bottom, .nav-right .bottom, .nav-side .bottom, .modal, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
 .form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .chart-header, .chart-icon, .chart-footer, .chart-data-number, .profile-header, .profile-header .picture, .profile-header .description, .profile-actions .actions, .inline, .inline-r, .flex-c {
   overflow: hidden;
 }
@@ -416,6 +416,7 @@ pre span:before {
       -ms-flex-pack: center;
           justify-content: center;
   color: var(--dark-color);
+  cursor: pointer;
 }
 
 .nav a.is-icon {
@@ -491,7 +492,7 @@ pre span:before {
           justify-content: flex-end;
 }
 
-.nav-left {
+.nav-left, .nav-right, .nav-side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,7 +505,7 @@ pre span:before {
           flex-direction: column;
 }
 
-.nav-left .top {
+.nav-left .top, .nav-right .top, .nav-side .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,7 +521,7 @@ pre span:before {
           flex: 1;
 }
 
-.nav-left .middle {
+.nav-left .middle, .nav-right .middle, .nav-side .middle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,7 +540,7 @@ pre span:before {
           flex: 3;
 }
 
-.nav-left .bottom {
+.nav-left .bottom, .nav-right .bottom, .nav-side .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,60 +1,63 @@
 .nav {
-  a {
-    padding: 0 $nav-link-pad;
-    height: $nav-height;
-    @include flex-center;
-    color: var(--dark-color);
-    &.is-icon {
-      width: $nav-height;
-      padding: 0;
-      > * {
-        color: var(--grey-color);
-      }
-    }
-
-    &:hover {
-      color: var(--dark-color);
-      > * {
+    a {
+        padding: 0 $nav-link-pad;
+        height: $nav-height;
+        @include flex-center;
         color: var(--dark-color);
-      }
+        cursor: pointer;
+        &.is-icon {
+            width: $nav-height;
+            padding: 0;
+            > * {
+                color: var(--grey-color);
+            }
+        }
+
+        &:hover {
+            color: var(--dark-color);
+            > * {
+                color: var(--dark-color);
+            }
+        }
     }
-  }
-  &-profile {
-    .username {
-      font-size: var(--font-normal);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 90px;
+    &-profile {
+        .username {
+            font-size: var(--font-normal);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 90px;
+        }
     }
-  }
-  &-top {
-    @include flex-rows;
-    justify-content: space-between;
-    .left {
-      @include flex-rows;
-      justify-content: flex-start;
+    &-top {
+        @include flex-rows;
+        justify-content: space-between;
+        .left {
+            @include flex-rows;
+            justify-content: flex-start;
+        }
+        .right {
+            @include flex-rows;
+            justify-content: flex-end;
+        }
     }
-    .right {
-      @include flex-rows;
-      justify-content: flex-end;
+    &-left,
+    &-right,
+    &-side {
+        @include flex-cols;
+        .top {
+            @include flex-cols;
+            flex: 1;
+        }
+        .middle {
+            @include flex-cols;
+            justify-content: center;
+            flex: 3;
+        }
+        .bottom {
+            @include flex-cols;
+            justify-content: flex-end;
+            flex: 1;
+        }
     }
-  }
-  &-left {
-    @include flex-cols;
-    .top {
-      @include flex-cols;
-      flex: 1;
-    }
-    .middle {
-      @include flex-cols;
-      justify-content: center;
-      flex: 3;
-    }
-    .bottom {
-      @include flex-cols;
-      justify-content: flex-end;
-      flex: 1;
-    }
-  }
 }
