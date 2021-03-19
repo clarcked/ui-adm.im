@@ -1,12 +1,13 @@
-ion-icon {
-  --ionicon-stroke-width: 16px;
-  font-size: var(--icon-size);
+ion-icon,
+.is-icon {
+    --ionicon-stroke-width: 16px;
+    font-size: var(--icon-size);
 }
 
 .icon {
-  &-sm {
-    > * {
-      font-size: $icon-size * 0.5;
+    &-sm {
+        > * {
+            font-size: $icon-size * 0.5;
+        }
     }
-  }
 }
