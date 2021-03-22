@@ -4,10 +4,12 @@ $form-label-size: 12px;
     .field {
         position: relative;
         height: $form-field-size;
+        width: 100%;
         .control {
             border: 1px solid darken(#fff, 10);
             border-radius: 2px;
             @include flex-rows;
+            @extend %expanded;
             padding: 0 10px;
             &.has-icon {
                 padding: 0 0;
@@ -26,6 +28,7 @@ $form-label-size: 12px;
             }
             .input {
                 flex: 1;
+                width: 100%;
                 border: none;
                 height: $form-field-size -2;
                 &::placeholder {
@@ -50,9 +53,10 @@ $form-label-size: 12px;
                     border-bottom-left-radius: 3px;
                     border-bottom-right-radius: 3px;
                     position: absolute;
-                    z-index: 999;
+                    z-index: 99;
                     width: 100%;
                     max-height: 100px;
+                    width: 100%;
                     overflow-y: auto;
                     overflow-x: hidden;
                 }
@@ -61,6 +65,7 @@ $form-label-size: 12px;
                     padding: 10px 10px;
                     cursor: pointer;
                     height: auto;
+                    width: 100%;
                     &:hover {
                         background: darken(#fff, 5);
                     }

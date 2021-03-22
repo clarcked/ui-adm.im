@@ -1,45 +1,65 @@
+%grid-gap {
+    &.gap {
+        gap: $gap;
+    }
+}
 .rows {
-  @include flex-rows;
-  flex-wrap: wrap;
-  &.gap > * {
-    padding: $gap;
-  }
-  &.nowrap {
-    flex-wrap: nowrap;
-  }
-  &.space-b {
-    justify-content: space-between;
-  }
-  .col {
-    @for $col from 1 to 14 {
-      &-#{$col} {
-        width: calc(#{(100vw / 14) * $col} - 2px);
-      }
-      &-#{$col}p {
-        width: calc(#{(100% / 14) * $col} - 2px);
-      }
+    @include flex-rows;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    &.gap {
+        > * {
+            padding: $gap / 2;
+            &:first-of-type {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
     }
-    &-auto {
-      flex: 1;
+    &.nowrap {
+        flex-wrap: nowrap;
     }
-  }
+    &.space-b {
+        justify-content: space-between;
+    }
+    .col {
+        @for $col from 1 to 14 {
+            &-#{$col} {
+                width: calc(#{(100vw / 14) * $col} - 2px);
+            }
+            &-#{$col}p {
+                width: calc(#{(100% / 14) * $col} - 2px);
+            }
+        }
+        &-auto {
+            flex: 1;
+        }
+    }
 }
 .grid-r {
-  @include grid-rows;
-  &-a-1 {
-    @include grid-rows(1, auto 1fr);
-  }
-  &-1-a {
-    @include grid-rows(1, 1fr auto);
-  }
+    @include grid-rows;
+    @extend %grid-gap;
+    &-a-1 {
+        @include grid-rows(1, auto 1fr);
+        @extend %grid-gap;
+    }
+    &-1-a {
+        @include grid-rows(1, 1fr auto);
+        @extend %grid-gap;
+    }
 }
 
 .grid-c {
-  @include grid-cols;
-  &-a-1 {
-    @include grid-cols(1, auto 1fr);
-  }
-  &-1-a {
-    @include grid-cols(1, 1fr auto);
-  }
+    @include grid-cols;
+    @extend %grid-gap;
+    &-a-1 {
+        @include grid-cols(1, auto 1fr);
+        @extend %grid-gap;
+    }
+    &-1-a {
+        @include grid-cols(1, 1fr auto);
+        @extend %grid-gap;
+    }
 }

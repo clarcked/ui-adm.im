@@ -1,99 +1,123 @@
 :root {
-  --wire-b-color: #{darken(#fff, 7)};
+    --wire-b-color: #{darken(#fff, 7)};
 }
 
 .wire {
-  &-b {
-    border-bottom: 1px solid var(--wire-b-color);
-  }
-  &-l {
-    border-left: 1px solid var(--wire-b-color);
-  }
-  &-r {
-    border-right: 1px solid var(--wire-b-color);
-  }
-  &-t {
-    border-top: 1px solid var(--wire-b-color);
-  }
+    &-b {
+        border-bottom: 1px solid var(--wire-b-color);
+    }
+    &-l {
+        border-left: 1px solid var(--wire-b-color);
+    }
+    &-r {
+        border-right: 1px solid var(--wire-b-color);
+    }
+    &-t {
+        border-top: 1px solid var(--wire-b-color);
+    }
 }
 .footer {
-  text-align: center;
-  padding: 5px;
+    text-align: center;
+    padding: 5px;
 }
 .pad {
-  padding: $pad-size;
-  &-sm {
-    padding: $pad-size-sm;
-  }
-  &-x {
+    padding: $pad-size;
     &-sm {
-      padding: 0 $pad-size-sm;
+        padding: $pad-size-sm;
     }
-  }
+    &-x {
+        &-sm {
+            padding: 0 $pad-size-sm;
+        }
+    }
+}
+.no {
+    &-pad {
+        &-t {
+            padding-top: 0;
+        }
+        &-b {
+            padding-bottom: 0;
+        }
+    }
 }
 .w {
-  &-100 {
-    width: 100px;
-  }
-  &-150 {
-    width: 150px;
-  }
-  &-300 {
-    width: 300px;
-  }
-  &-50p {
-    width: 50%;
-  }
-  &-50vw {
-    width: 50vw;
-  }
+    &-100 {
+        width: 100px;
+    }
+    &-150 {
+        width: 150px;
+    }
+    &-300 {
+        width: 300px;
+    }
+    &-50p {
+        width: 50%;
+    }
+    &-50v {
+        width: 50vw;
+    }
+    &-80v {
+        width: 80vw;
+    }
 }
 .h {
-  &-300 {
-    height: 300px;
-  }
-  &-auto {
-    height: auto;
-  }
+    &-300 {
+        height: 300px;
+    }
+    &-auto {
+        height: auto;
+    }
+    &-expand {
+        @extend %expanded;
+    }
 }
 .scroll {
-  overflow: auto;
+    overflow: auto;
 }
 .no-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .inline {
-  @include flex-rows;
-  align-items: center;
+    @include flex-rows;
+    align-items: center;
 }
 .inline-r {
-  @include flex-rows(true);
-  align-items: center;
+    @include flex-rows(true);
+    align-items: center;
 }
 .margin {
-  &-b {
-    margin-bottom: 15px;
-  }
+    &-b {
+        margin-bottom: 15px;
+    }
 }
 .flex-c {
-  @include flex-center;
+    @include flex-center;
 }
 .a-center {
-  align-items: center;
+    align-items: center;
 }
 .j-center {
-  justify-content: center;
+    justify-content: center;
 }
-.flow-a {
-  overflow: auto;
+.flow {
+    &-a {
+        overflow: auto;
+    }
+    &-visible {
+        overflow: visible;
+    }
+    &-hidden {
+        overflow: hidden;
+    } 
 }
 .outline {
-  border: none;
+    border: none;
 }
 .circle {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 .flex-a {
-  flex: auto;
+    flex: auto;
 }

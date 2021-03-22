@@ -1,26 +1,32 @@
 $btn-height: 36px;
 .btn {
-  @extend %cleaned;
-  @include flex-center;
-  height: $btn-height - 2;
-  background: #fff;
-  border: 1px solid var(--btn-b-color);
-  border-radius: 2px;
-  padding: 0 15px;
-  cursor: pointer;
-  &:active,
-  &:hover {
-    border-color: var(--hover-b-color);
-    color: var(--hover-color);
-    * {
-      color: var(--hover-color);
+    @extend %cleaned;
+    @include flex-center;
+    height: $btn-height - 2;
+    background: #fff;
+    border: 1px solid var(--btn-b-color);
+    border-radius: 2px;
+    padding: 0 15px;
+    cursor: pointer;
+    &:active,
+    &:hover {
+        border-color: var(--hover-b-color);
+        color: var(--hover-color);
+        * {
+            color: var(--hover-color);
+        }
     }
-  }
-  &-icon {
-    padding: 0 0;
-    @include dimension($btn-height - 2);
-    * {
-      font-size: 12px;
+    &-icon {
+        padding: 0 0;
+        @include dimension($btn-height - 2);
+        * {
+            font-size: 12px;
+        }
     }
-  }
+    &-sm {
+        height: ($btn-height / 2) - 2;
+        &.btn-icon {
+            @include dimension(($btn-height / 1.5) - 2);
+        }
+    }
 }

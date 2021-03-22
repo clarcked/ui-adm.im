@@ -89,8 +89,7 @@ h6:active, .btn:active {
 }
 
 html,
-body, .rows, .grid-r, .grid-r-a-1, .grid-r-1-a, .grid-c, .grid-c-a-1, .grid-c-1-a, .nav a, .nav-top, .nav-top .left, .nav-top .right, .nav-left, .nav-right, .nav-side, .nav-left .top, .nav-right .top, .nav-side .top, .nav-left .middle, .nav-right .middle, .nav-side .middle, .nav-left .bottom, .nav-right .bottom, .nav-side .bottom, .modal, .avatar-group, .form .field .control, .form .field .control.has-icon .left,
-.form .field .control.has-icon .right, .btn, .card-body .thumb, .card-footer, .review, .review-stars, .slider, .chart-header, .chart-icon, .chart-footer, .chart-data-number, .profile-header, .profile-header .picture, .profile-header .description, .profile-actions .actions, .inline, .inline-r, .flex-c {
+body, .form .field .control, .h-expand {
   width: 100%;
   height: 100%;
 }
@@ -208,6 +207,10 @@ pre span:before {
   color: #888;
 }
 
+.gap.grid-r, .gap.grid-r-a-1, .gap.grid-r-1-a, .gap.grid-c, .gap.grid-c-a-1, .gap.grid-c-1-a {
+  gap: 10px;
+}
+
 .rows {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,10 +224,20 @@ pre span:before {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .rows.gap > * {
-  padding: 10px;
+  padding: 5px;
+}
+
+.rows.gap > *:first-of-type {
+  padding-left: 0;
+}
+
+.rows.gap > *:last-of-type {
+  padding-right: 0;
 }
 
 .rows.nowrap {
@@ -583,9 +596,10 @@ pre span:before {
       -ms-flex-pack: center;
           justify-content: center;
   display: none;
+  z-index: 100;
 }
 
-.modal.open {
+.modal.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,12 +612,10 @@ pre span:before {
   border-radius: 3px;
   border: 1px solid #cccccc;
   position: relative;
+  overflow: hidden;
 }
 
 .modal-actions {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,6 +694,7 @@ pre span:before {
 .form .field {
   position: relative;
   height: 35px;
+  width: 100%;
 }
 
 .form .field .control {
@@ -736,6 +749,7 @@ pre span:before {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
   border: none;
   height: 35px -2;
 }
@@ -773,9 +787,10 @@ pre span:before {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   position: absolute;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
   max-height: 100px;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -785,6 +800,7 @@ pre span:before {
   padding: 10px 10px;
   cursor: pointer;
   height: auto;
+  width: 100%;
 }
 
 .form .field.selector .selector-item:hover {
@@ -871,6 +887,15 @@ pre span:before {
 
 .btn-icon * {
   font-size: 12px;
+}
+
+.btn-sm {
+  height: 16px;
+}
+
+.btn-sm.btn-icon {
+  width: 22px;
+  height: 22px;
 }
 
 .card {
@@ -1242,6 +1267,14 @@ pre span:before {
   padding: 0 15px;
 }
 
+.no-pad-t {
+  padding-top: 0;
+}
+
+.no-pad-b {
+  padding-bottom: 0;
+}
+
 .w-100 {
   width: 100px;
 }
@@ -1258,8 +1291,12 @@ pre span:before {
   width: 50%;
 }
 
-.w-50vw {
+.w-50v {
   width: 50vw;
+}
+
+.w-80v {
+  width: 80vw;
 }
 
 .h-300 {
@@ -1344,6 +1381,14 @@ pre span:before {
 
 .flow-a {
   overflow: auto;
+}
+
+.flow-visible {
+  overflow: visible;
+}
+
+.flow-hidden {
+  overflow: hidden;
 }
 
 .outline {

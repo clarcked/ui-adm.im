@@ -1,47 +1,42 @@
 @mixin dimension($size: $avatar-size) {
-  width: $size;
-  height: $size;
+    width: $size;
+    height: $size;
 }
 @mixin grid-cols($repeat: 1, $frames: 1fr 1fr) {
-  display: grid;
-  grid-template-columns: repeat($repeat, $frames);
-  align-items: stretch;
-  @extend %expanded;
-  @extend %hiddenflow;
+    display: grid;
+    grid-template-columns: repeat($repeat, $frames);
+    align-items: stretch;
+    @extend %hiddenflow;
 }
 @mixin grid-rows($repeat: 1, $frames: 1fr 1fr) {
-  display: grid;
-  grid-template-rows: repeat($repeat, $frames);
-  @extend %expanded;
-  @extend %hiddenflow;
+    display: grid;
+    grid-template-rows: repeat($repeat, $frames);
+    @extend %hiddenflow;
 }
 @mixin flex-center {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  @extend %expanded;
-  @extend %hiddenflow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @extend %hiddenflow;
 }
 @mixin flex-rows($isReverse: false) {
-  display: flex;
-  align-items: stretch;
-  @extend %expanded;
-  @extend %hiddenflow;
-  @if $isReverse {
-    flex-direction: row-reverse;
-  } @else {
-    flex-direction: row;
-  }
+    display: flex;
+    align-items: stretch;
+    @extend %hiddenflow;
+    @if $isReverse {
+        flex-direction: row-reverse;
+    } @else {
+        flex-direction: row;
+    }
 }
 @mixin flex-cols($isReverse: false) {
-  display: flex;
-  align-items: stretch;
-  @extend %expanded;
-  @extend %hiddenflow;
-  @if $isReverse {
-    flex-direction: column-reverse;
-  } @else {
-    flex-direction: column;
-  }
+    display: flex;
+    align-items: stretch;
+    @extend %hiddenflow;
+    @if $isReverse {
+        flex-direction: column-reverse;
+    } @else {
+        flex-direction: column;
+    }
 }
