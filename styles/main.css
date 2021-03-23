@@ -35,7 +35,7 @@ h2,
 h3,
 h4,
 h5,
-h6, .btn {
+h6, .btn, .tag, .tag-btn {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -67,7 +67,7 @@ h2:hover,
 h3:hover,
 h4:hover,
 h5:hover,
-h6:hover, .btn:hover, html:active,
+h6:hover, .btn:hover, .tag:hover, .tag-btn:hover, html:active,
 body:active,
 article:active,
 figure:active,
@@ -84,7 +84,7 @@ h2:active,
 h3:active,
 h4:active,
 h5:active,
-h6:active, .btn:active {
+h6:active, .btn:active, .tag:active, .tag-btn:active {
   outline: none;
 }
 
@@ -896,6 +896,81 @@ pre span:before {
 .btn-sm.btn-icon {
   width: 22px;
   height: 22px;
+}
+
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.tags .tag {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+}
+
+.tag-icon {
+  padding: 0 0;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tag-icon * {
+  font-size: 12px;
+}
+
+.tag-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px 0 5px 10px;
+}
+
+.tag-btn {
+  cursor: pointer;
+  background: none;
+}
+
+.tag-btn:hover, .tag-btn:hover {
+  color: gray;
 }
 
 .card {
