@@ -57,6 +57,9 @@
     &-50v {
         width: 50vw;
     }
+    &-35v {
+        width: 35vw;
+    }
     &-80v {
         width: 80vw;
     }
@@ -110,7 +113,7 @@
     }
     &-hidden {
         overflow: hidden;
-    } 
+    }
 }
 .outline {
     border: none;

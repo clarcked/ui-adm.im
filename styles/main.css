@@ -977,6 +977,77 @@ pre span:before {
   overflow: hidden;
 }
 
+.card .reviews {
+  margin-bottom: 5px;
+}
+
+.card .title {
+  margin-bottom: 5px;
+  font-size: var(--font-normal);
+  font-weight: bold;
+}
+
+.card .description {
+  font-size: calc(var(--font-normal) - 2px);
+}
+
+.card.card-overlay {
+  position: relative;
+  background-size: cover;
+  min-height: 150px;
+  border-radius: 5px;
+  border: 1px solid #f2f2f2;
+}
+
+.card.card-overlay:hover .card-header {
+  display: block;
+}
+
+.card.card-overlay .card-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  display: none;
+  z-index: 3;
+}
+
+.card.card-overlay .card-header .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.card.card-overlay .card-body {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  background-color: rgba(34, 34, 34, 0.5);
+  color: #fff;
+  z-index: 1;
+}
+
+.card.card-overlay .card-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  padding: 15px;
+  background-color: rgba(34, 34, 34, 0.5);
+  color: #fff;
+}
+
 .card-body .thumb {
   width: 100%;
   overflow: hidden;
@@ -1001,21 +1072,6 @@ pre span:before {
      object-fit: cover;
   border: 2px solid #fafafa;
   border-radius: 2px;
-}
-
-.card-body .reviews {
-  margin: 5px 0 0 0;
-}
-
-.card-body .title {
-  margin: 5px 0 0 0;
-  font-size: var(--font-normal);
-  font-weight: 400;
-}
-
-.card-body .description {
-  margin: 5px 0 0 0;
-  color: var(--grey-color);
 }
 
 .card-footer {
@@ -1368,6 +1424,10 @@ pre span:before {
 
 .w-50v {
   width: 50vw;
+}
+
+.w-35v {
+  width: 35vw;
 }
 
 .w-80v {
