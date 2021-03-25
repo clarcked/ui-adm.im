@@ -30,6 +30,9 @@
             padding: 0 $pad-size-sm;
         }
     }
+    &-5 {
+        padding: 5px;
+    }
 }
 .no {
     &-pad {
@@ -51,6 +54,9 @@
     &-300 {
         width: 300px;
     }
+    &-350 {
+        width: 350px;
+    }
     &-50p {
         width: 50%;
     }
@@ -62,6 +68,13 @@
     }
     &-80v {
         width: 80vw;
+    }
+}
+.min {
+    &-w {
+        &-350 {
+            min-width: 350px;
+        }
     }
 }
 .h {
@@ -101,8 +114,16 @@
 .a-center {
     align-items: center;
 }
-.j-center {
-    justify-content: center;
+.j {
+    &-left {
+        justify-content: flex-start;
+    }
+    &-right {
+        justify-content: flex-end;
+    }
+    &-center {
+        justify-content: center;
+    }
 }
 .flow {
     &-a {

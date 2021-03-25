@@ -4,18 +4,15 @@
     }
 }
 .rows {
-    @include flex-rows;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    align-items: baseline;
     flex-basis: 100%;
     &.gap {
         > * {
             padding: $gap / 2;
-            &:first-of-type {
-                padding-left: 0;
-            }
-            &:last-of-type {
-                padding-right: 0;
-            }
         }
     }
     &.nowrap {
@@ -25,12 +22,12 @@
         justify-content: space-between;
     }
     .col {
-        @for $col from 1 to 14 {
+        @for $col from 1 to 12 {
             &-#{$col} {
-                width: calc(#{(100vw / 14) * $col} - 2px);
+                width: calc(#{(100% / 12) * $col});
             }
-            &-#{$col}p {
-                width: calc(#{(100% / 14) * $col} - 2px);
+            &-#{$col}v {
+                width: calc(#{(100vw / 12) * $col});
             }
         }
         &-auto {
