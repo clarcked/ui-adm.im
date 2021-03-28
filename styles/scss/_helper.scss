@@ -60,6 +60,9 @@
     &-50p {
         width: 50%;
     }
+    &-100p {
+        width: 100%;
+    }
     &-50v {
         width: 50vw;
     }
@@ -83,6 +86,9 @@
     }
     &-auto {
         height: auto;
+    }
+    &-100p {
+        height: 100%;
     }
     &-expand {
         @extend %expanded;

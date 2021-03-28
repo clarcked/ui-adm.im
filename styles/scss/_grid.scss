@@ -35,6 +35,7 @@
         }
     }
 }
+
 .grid-r {
     @include grid-rows;
     @extend %grid-gap;
@@ -46,17 +47,37 @@
         @include grid-rows(1, 1fr auto);
         @extend %grid-gap;
     }
+    &-1-1 {
+        @include grid-rows(1, 1fr 1fr);
+        @extend %grid-gap;
+    }
 }
 
 .grid-c {
     @include grid-cols;
     @extend %grid-gap;
+    &.gap {
+        gap: $gap;
+    }
     &-a-1 {
         @include grid-cols(1, auto 1fr);
         @extend %grid-gap;
+        &.gap {
+            gap: $gap;
+        }
     }
     &-1-a {
         @include grid-cols(1, 1fr auto);
         @extend %grid-gap;
+        &.gap {
+            gap: $gap;
+        }
+    }
+    &-1-1 {
+        @include grid-cols(1, 1fr 1fr);
+        @extend %grid-gap;
+        &.gap {
+            gap: $gap;
+        }
     }
 }
